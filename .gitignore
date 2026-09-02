@@ -1,0 +1,48 @@
+# Environment & Secrets
+.env
+.env.local
+*.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+.venv
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+.npm
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database & Storage
+*.db
+*.sqlite
+*.sqlite3
+razorrecover
+data/*.sqlite
+data/synthetic_transactions.csv
+data/synthetic_customers.csv
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

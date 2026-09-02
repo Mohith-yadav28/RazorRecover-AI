@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: razorrecover-ai-backend
+    env: python
+    region: singapore
+    buildCommand: "pip install -r requirements.txt && python ../scripts/generate_synthetic_data.py"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: ENV
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: DATABASE_URL
+        value: sqlite:///./razorrecover.db

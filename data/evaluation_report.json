@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-09-02T17:26:39.928944+00:00",
+  "evaluation_type": "experimental_synthetic_benchmark",
+  "transactions_evaluated": 5000,
+  "total_revenue_at_risk_inr": 53323521.15,
+  "razorrecover_ai": {
+    "recovered_revenue_inr": 13521156.0,
+    "recovered_count": 1844,
+    "recovery_rate_pct": 25.36,
+    "human_escalation_count": 410,
+    "stopped_cases_count": 2185,
+    "safety_guardrails_active": true
+  },
+  "naive_baseline_retry": {
+    "recovered_revenue_inr": 3556421.0,
+    "recovered_count": 1079,
+    "recovery_rate_pct": 6.67,
+    "wasted_unnecessary_retries": 7842,
+    "safety_guardrails_active": false
+  },
+  "improvements": {
+    "additional_revenue_recovered_inr": 9964735.0,
+    "recovery_yield_uplift_pct": 18.69,
+    "unnecessary_retry_reduction_pct": 59.8
+  }
+}
