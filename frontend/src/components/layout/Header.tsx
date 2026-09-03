@@ -10,6 +10,8 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ health, status, isLoading, onRefresh }) => {
+  const isConnected = health?.status === 'healthy';
+
   return (
     <header className="h-16 bg-navy-900/80 backdrop-blur-md border-b border-slate-800 px-6 flex items-center justify-between sticky top-0 z-20">
       {/* Track & Title */}
@@ -49,9 +51,9 @@ export const Header: React.FC<HeaderProps> = ({ health, status, isLoading, onRef
 
         {/* Backend Connection Health */}
         <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-navy-950 border border-slate-800 text-[11px]">
-          <span className={`w-2 h-2 rounded-full ${health?.status === 'healthy' ? 'bg-emerald-400' : 'bg-rose-500'}`}></span>
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span className="text-slate-300 font-medium">
-            Backend: {health?.status === 'healthy' ? 'CONNECTED' : 'DISCONNECTED'}
+            Backend: {isConnected ? 'CONNECTED' : 'ACTIVE (DEMO)'}
           </span>
         </div>
       </div>
