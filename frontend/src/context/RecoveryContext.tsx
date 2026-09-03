@@ -72,9 +72,10 @@ export const RecoveryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         fetchRecoveryCases().catch(() => null)
       ]);
       
-      if (sumData) setSummary(sumData);
+      if (sumData && sumData.total_transactions > 0) setSummary(sumData);
       if (failData && failData.length > 0) setFailureMetrics(failData);
       if (casesData && casesData.length > 0) setCases(casesData);
+
       
       setLastUpdated(new Date());
     } finally {
